@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CoffeeRun Payment</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        form :focus:required:invalid {
+            border-color: #a94442;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <header>
+        <h1>CoffeeRun Payment</h1>
+    </header>
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-coffee-pay="form">
+
+                    <div class="form-group">
+                        <label for="CardUser">Name</label>
+                        <input class="form-control" name="carduser" id="carduser" autofocus required
+                            pattern="[a-zA-Z\s]+" />
+                    </div>
+                    <div class="form-group">
+                        <label for="CardNumber">Card Number</label>
+                        <input class="form-control" type="card" name="cardnumber" id="cardnumber" value=""
+                            placeholder="1234" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="CardExpiration">Card Expiration</label>
+                        <input class="form-control" type="cardexpire" name="cardexpire" id="cardexpire" value=""
+                            placeholder="MM" required />
+                        <input class="form-control" type="cardexpire" name="cardexpire" id="cardexpire" value=""
+                            placeholder="YY" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="CVV">CVV</label>
+                        <input class="form-control" type="cvv" name="cvv" id="cvv" value="" placeholder="CVV"
+                            required />
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" charset="utf-8"></script>
+    <script src="scripts/pay.js" charset="utf-8"></script>
+</body>
+
+</html>
